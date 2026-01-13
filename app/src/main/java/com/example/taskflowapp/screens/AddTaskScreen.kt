@@ -6,6 +6,8 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
+import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.compose.rememberNavController
 
 @Composable
 fun AddTaskScreen(navController: NavController) {
@@ -47,4 +49,11 @@ fun AddTaskScreen(navController: NavController) {
             Text("Save Task")
         }
     }
+}
+
+@Preview(showBackground = true)
+@Composable
+fun AddTaskScreenPreview() {
+    val navController = rememberNavController()
+    AddTaskScreen(navController = navController)
 }
